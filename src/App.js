@@ -8,8 +8,10 @@ import { TitlePage } from './components/Title/Title';
 import { Heading } from './components/Heading/Heading';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getContacts, getFilter } from 'redux/selectors';
-import { addContact, removeContact, setFilter } from 'redux/action';
+import { getContacts } from 'redux/contacts/contacts-selectors';
+import { getFilter } from 'redux/filter/filter-selectors';
+import { addContact, removeContact } from 'redux/contacts/contacts-slice';
+import { setFilter } from 'redux/filter/filter-slice';
 
 export default function App() {
   const contacts = useSelector(getContacts);
